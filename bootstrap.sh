@@ -33,14 +33,15 @@ __launch_sudoloop_interactive() {
 
 do_root() {
     # install build dependencies with brew
-    brew install    \
+    brew install -y \
         openssl@3 readline scdoc sqlite3 xz tcl-tk@8 libb2 zstd zlib pkgconfig
 
     # install runtime dependencies with brew
-    brew install font-jetbrains-mono-nerd-font node tree-sitter-cli
+    brew install -y \
+        font-jetbrains-mono-nerd-font node tree-sitter-cli
 
     # install applications with brew
-    brew install    \
+    brew install -y \
         audacity cmake claude claude-code datagrip fd fish gh gimp git-lfs  \
         google-chrome htop kicad macchina macs-fan-control markedit neovim  \
         netron nrf-connect pipx pyenv qdirstat segger-jlink tailscale-app   \
