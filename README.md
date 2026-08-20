@@ -10,11 +10,15 @@
 # Post-install
 
 - When the laptop is plugged into an external display, use BetterDisplay to tweak the resolution and refresh rate.
+- Open Macs Fan Control, and when prompted to enable fan control, accept the prompt.
+- Log into Zotero and do an initial sync.
 - In System Settings:
+  - Under "General" > "Sharing", set "Local hostname" to `kenny-osx.local`.
   - Under "Mouse", set "Natural scrolling" to off.
   - Under "Battery" > "Charging", set "Charge Limit" to 80%.
-- In Google Chrome Settings:
+- In Google Chrome:
   - Under "Passwords and Autofill" > "Google Password Manager" > "Settings", set "Offer to save passwords and passkeys" to off.
+  - Add and activate the Bitwarden extension.
   - Under "Settings" > "Appearance" > "Theme", set the theme to yellow.
 - In the terminal:
   - Run `gh auth login -p https -w` and follows the prompts to set up Git over HTTPS.
