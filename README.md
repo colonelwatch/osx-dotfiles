@@ -10,3 +10,11 @@
 # Post-install
 
 - When the laptop is plugged into an external display, use BetterDisplay to tweak the resolution and refresh rate.
+- In System Settings:
+  - Under "Mouse", set "Natural scrolling" to off.
+  - Under "Battery" > "Charging", set "Charge Limit" to 80%.
+- In Google Chrome Settings:
+  - Under "Passwords and Autofill" > "Google Password Manager" > "Settings", set "Offer to save passwords and passkeys" to off.
+  - Under "Settings" > "Appearance" > "Theme", set the theme to yellow.
+- In the terminal:
+  - Run `gh auth login -p https -w` and follows the prompts to set up Git over HTTPS.
