@@ -5,13 +5,23 @@ set -e
 BREW_INSTALL_SH="https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
 
 
+__brew_missing() {
+    ! [ -x "$(command -v brew)" ]
+}
+
+
+__betterdisplay_missing() {
+    __brew_missing || ! brew list --casks --full-name | grep -q betterdisplay
+}
+
+
 __fish_is_not_default() {
     [ "${SHELL##*/}" != "fish" ]
 }
 
 
 do_setup() {
-    if __brew_missing || __fish_is_not_default; then
+    if __brew_missing || __fish_is_not_default || __betterdisplay_missing; then
         __launch_sudoloop_interactive
     fi
 
@@ -21,11 +31,6 @@ do_setup() {
     else
         brew update
     fi
-}
-
-
-__brew_missing() {
-    ! [ -x "$(command -v brew)" ]
 }
 
 
@@ -47,11 +52,11 @@ do_root() {
 
     # install applications with brew
     brew install -y \
-        audacity cmake claude claude-code datagrip fd fish gh gimp git-lfs  \
-        google-chrome htop macchina macs-fan-control markedit neovim netron \
-        nrf-connect parallel pipx pyenv qdirstat segger-jlink tailscale-app \
-        raspberry-pi-imager ripgrep rsync rust rustup windows-app           \
-        wireshark-app yazi zotero
+        audacity betterdisplay cmake claude claude-code datagrip fd fish    \
+        gh gimp git-lfs google-chrome htop macchina macs-fan-control        \
+        markedit neovim netron nrf-connect parallel pipx pyenv qdirstat     \
+        segger-jlink tailscale-app raspberry-pi-imager ripgrep rsync rust   \
+        rustup windows-app wireshark-app yazi zotero
 
     # declare brew-managed rust to rustup and make it the default
     __source_rustup &&                                              \
