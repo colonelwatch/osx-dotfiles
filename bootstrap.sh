@@ -5,8 +5,13 @@ set -e
 BREW_INSTALL_SH="https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
 
 
+__fish_is_not_default() {
+    [ "${SHELL##*/}" != "fish" ]
+}
+
+
 do_setup() {
-    if __brew_missing || [ "${SHELL##*/}" != "fish" ]; then
+    if __brew_missing || __fish_is_not_default; then
         __launch_sudoloop_interactive
     fi
 
@@ -56,7 +61,9 @@ do_root() {
     __install_alacritty
 
     # set fish as default for current user (needs sudo to be non-interactive)
-    sudo chsh -s "$(command -v fish)" "$(id -un)"
+    if __fish_is_not_default; then
+        sudo chsh -s "$(command -v fish)" "$(id -un)"
+    fi
 }
 
 
