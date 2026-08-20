@@ -26,7 +26,7 @@ __brew_missing() {
 
 __launch_sudoloop_interactive() {
     sudo -v  # this is interactive, thereafter this function is non-interactive
-    while true; do sudo -n -v; sleep 60; kill -0 $$ 2> /dev/null || exit; done &
+    while true; do sleep 60; kill -0 $$ 2> /dev/null || exit; sudo -n -v; done &
 }
 
 
