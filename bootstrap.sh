@@ -73,6 +73,8 @@ do_user() {
     # install config files
     mkdir -p ~/.config
     ln -s -f "$PWD"/home/.config/* ~/.config/
+
+    git lfs install
 }
 
 
