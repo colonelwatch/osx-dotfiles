@@ -50,8 +50,8 @@ do_root() {
         audacity cmake claude claude-code datagrip fd fish gh gimp git-lfs  \
         google-chrome htop macchina macs-fan-control markedit neovim netron \
         nrf-connect parallel pipx pyenv qdirstat segger-jlink tailscale-app \
-        raspberry-pi-imager ripgrep rust rustup windows-app wireshark-app   \
-        yazi zotero
+        raspberry-pi-imager ripgrep rsync rust rustup windows-app           \
+        wireshark-app yazi zotero
 
     # declare brew-managed rust to rustup and make it the default
     __source_rustup &&                                              \
