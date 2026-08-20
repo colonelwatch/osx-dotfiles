@@ -82,10 +82,11 @@ do_user() {
     pipx install compiledb
     __source_pyenv && pyenv install --skip-existing 3.12 3.13 3.13t 3.14 3.14t
 
-    # install config files
-    mkdir -p ~/.config
-    ln -s -f "$PWD"/home/.config/* ~/.config/
+    mkdir -p ~/.cache/ssh  # make folder .ssh/config will expect
 
+    # set up user config
+    mkdir -p ~/.config && ln -s -f "$PWD"/home/.config/* ~/.config/
+    mkdir -p ~/.ssh && ln -s -f "$PWD"/home/.ssh/* ~/.ssh/
     git lfs install
 }
 
