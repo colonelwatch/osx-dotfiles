@@ -4,3 +4,4 @@
    - If this command opens a GUI prompt to install command line tools, accept the prompt.
 2. Navigate to the downloaded folder with the command `cd .dotfiles`.
 3. Launch the bootstrap with the command `./bootstrap.sh`.
+4. Install KiCad with the command `brew install kicad`, and enter the password when prompted.

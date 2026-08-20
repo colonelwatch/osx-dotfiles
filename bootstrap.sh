@@ -43,8 +43,8 @@ do_root() {
     # install applications with brew
     brew install -y \
         audacity cmake claude claude-code datagrip fd fish gh gimp git-lfs  \
-        google-chrome htop kicad macchina macs-fan-control markedit neovim  \
-        netron nrf-connect pipx pyenv qdirstat segger-jlink tailscale-app   \
+        google-chrome htop macchina macs-fan-control markedit neovim netron \
+        nrf-connect pipx pyenv qdirstat segger-jlink tailscale-app          \
         raspberry-pi-imager ripgrep rust rustup windows-app wireshark-app   \
         yazi zotero
 
