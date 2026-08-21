@@ -6,6 +6,10 @@
 3. Launch the bootstrap with the command `./bootstrap.sh`.
 4. Install KiCad with the command `brew install kicad`, and enter the password when prompted.
 5. Reboot the machine to apply changes.
+6. Log into JetBrains and download DataGrip under the fallback license.
+7. Log into XMOS and download XTC Tools.
+
+<!-- TODO: establish how XMOS SetEnv.sh script's supporting of only Bash will be handled -->
 
 # Post-install
 
