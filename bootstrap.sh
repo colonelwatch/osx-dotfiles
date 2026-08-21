@@ -5,27 +5,27 @@ set -e
 BREW_INSTALL_SH="https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
 
 
-__brew_missing() {
-    ! [ -x "$(command -v brew)" ]
+__brew_found() {
+    [ -x "$(command -v brew)" ]
 }
 
 
-__betterdisplay_missing() {
-    __brew_missing || ! brew list --casks --full-name | grep -q betterdisplay
+__pkg_found() {
+    __brew_found && brew list --full-name | grep -q "^$1\$"
 }
 
 
-__fish_is_not_default() {
-    [ "${SHELL##*/}" != "fish" ]
+__fish_is_login() {
+    [ "${SHELL##*/}" == "fish" ]
 }
 
 
 do_setup() {
-    if __brew_missing || __fish_is_not_default || __betterdisplay_missing; then
+    if ! { __brew_found && __pkg_found betterdisplay && __fish_is_login; }; then
         __launch_sudoloop_interactive
     fi
 
-    if __brew_missing; then
+    if ! __brew_found; then
         NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL "$BREW_INSTALL_SH")" && \
             eval "$(/opt/homebrew/bin/brew shellenv)"
     else
@@ -38,7 +38,6 @@ __launch_sudoloop_interactive() {
     sudo -v  # this is interactive, thereafter this function is non-interactive
     while true; do sleep 60; kill -0 $$ 2> /dev/null || exit; sudo -n -v; done &
 }
-
 
 
 do_root() {
@@ -65,8 +64,8 @@ do_root() {
 
     __install_alacritty
 
-    # set fish as default for current user (needs sudo to be non-interactive)
-    if __fish_is_not_default; then
+    # set fish as login shell for user (needs sudo to be non-interactive)
+    if ! __fish_is_login; then
         sudo chsh -s "$(command -v fish)" "$(id -un)"
     fi
 }
