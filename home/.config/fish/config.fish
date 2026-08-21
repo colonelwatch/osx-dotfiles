@@ -11,6 +11,11 @@ set -gx EDITOR nvim
 
 fish_add_path -g "$HOME/.local/bin"
 fish_add_path -g "$(brew --prefix rustup)/bin"
+fish_add_path -g "$(brew --prefix rsync)/bin"
+
+# https://github.com/fish-shell/fish-shell/issues/2090#issuecomment-421833616
+set -q MANPATH || set MANPATH ''  # initializes MANPATH
+set -gx MANPATH $MANPATH "$(brew --prefix rsync)/share/man"
 
 # pyenv
 set -gx PYENV_ROOT "$HOME/.pyenv"
