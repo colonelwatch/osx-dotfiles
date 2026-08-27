@@ -54,8 +54,8 @@ do_root() {
         audacity betterdisplay cmake claude claude-code fd fish gh gimp     \
         git-lfs google-chrome htop macchina macs-fan-control markedit       \
         neovim netron ninja nrf-connect parallel pipx pyenv qdirstat        \
-        segger-jlink tailscale-app raspberry-pi-imager ripgrep rsync rust   \
-        rustup windows-app wireshark-app yazi zotero
+        segger-jlink tailscale-app telnet raspberry-pi-imager ripgrep rsync \
+        rust rustup windows-app wireshark-app yazi zotero
 
     # declare brew-managed rust to rustup and make it the default
     __source_rustup &&                                              \
