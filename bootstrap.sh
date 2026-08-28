@@ -47,6 +47,7 @@ do_root() {
 
     # install runtime dependencies with brew
     brew install -y \
+        font-ia-writer-duo font-ia-writer-mono font-ia-writer-quattro       \
         font-jetbrains-mono-nerd-font node tree-sitter-cli
 
     # install applications with brew
