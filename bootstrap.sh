@@ -65,6 +65,7 @@ do_root() {
 
     __install_alacritty
     cargo install mcumgrctl
+    gh extension install github/gh-stack
 
     # set fish as login shell for user (needs sudo to be non-interactive)
     if ! __fish_is_login; then
