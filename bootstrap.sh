@@ -64,7 +64,7 @@ do_root() {
         rustup default system
 
     __install_alacritty
-    go install github.com/apache/mynewt-mcumgr-cli/mcumgr@latest
+    cargo install mcumgrctl
 
     # set fish as login shell for user (needs sudo to be non-interactive)
     if ! __fish_is_login; then
