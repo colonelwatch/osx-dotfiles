@@ -1,0 +1,7 @@
+# Neovim (per-project configuration, traditionally not shared)
+.nvim.lua
+.nvimrc
+.exrc
+
+# Neovim (LSP cache)
+.cache
