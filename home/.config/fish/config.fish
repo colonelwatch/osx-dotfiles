@@ -30,3 +30,6 @@ set -gx MAKE_OPTS "-j$NPROC"
 # build parallelism
 set -gx CMAKE_BUILD_PARALLEL_LEVEL "$NPROC"
 set -gx MAKEFLAGS "-j$NPROC"
+
+# build compile database
+set -gx CMAKE_EXPORT_COMPILE_COMMANDS ON
