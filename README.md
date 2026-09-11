@@ -19,6 +19,7 @@
 - Open Macs Fan Control, and when prompted to enable fan control, accept the prompt.
 - Log into Zotero and do an initial sync.
 - In System Settings:
+  - Under "General" > "Login Items and Extensions", add XQuartz (in the `/Applications/Utilities`) under "Open at Login".
   - Under "General" > "Sharing", set "Local hostname" to `kenny-osx.local`.
   - Under "Mouse", set "Natural scrolling" to off.
   - Under "Battery" > "Charging", set "Charge Limit" to 80%.
