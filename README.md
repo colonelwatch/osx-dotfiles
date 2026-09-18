@@ -10,6 +10,7 @@
 7. Log into XMOS and download XTC Tools.
 8. Visit Nordic Semiconductor and download nRF Util to `.local/bin`, and mark it as executable with `chmod +x $path_to_nrfutil` if needed.
    - If it does not execute due to macOS security, running `xattr -d com.apple.quarantine $path_to_nrfutil` may help.
+9. Visit Armbian and download Armbian Imager.
 
 <!-- TODO: establish how XMOS SetEnv.sh script's supporting of only Bash will be handled -->
 
