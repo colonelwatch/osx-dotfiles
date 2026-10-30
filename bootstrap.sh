@@ -57,11 +57,12 @@ do_root() {
 
     # install applications with brew
     brew install -y \
-        audacity betterdisplay cmake claude claude-code fd fish gh gimp     \
-        git-lfs go google-chrome htop macchina macs-fan-control markedit    \
-        neovim netron ninja nrf-connect parallel pipx pyenv qdirstat        \
-        segger-jlink tailscale-app telnet raspberry-pi-imager ripgrep rsync \
-        rust rustup windows-app wireshark-app xquartz yazi zotero
+        audacity bitwarden-cli betterdisplay cmake claude claude-code fd    \
+        fish gh gimp git-lfs go google-chrome hf htop macchina              \
+        macs-fan-control markedit neovim netron ninja nrf-connect parallel  \
+        pipx pyenv qdirstat segger-jlink tailscale-app telnet               \
+        raspberry-pi-imager ripgrep rsync rust rustup windows-app           \
+        wireshark-app xquartz yazi zotero
 
     # declare brew-managed rust to rustup and make it the default
     __source_rustup &&                                              \
@@ -86,7 +87,7 @@ __source_rustup() {
 
 do_user() {
     # install user-local applications
-    pipx install compiledb
+    pipx install compiledb huggingface-hub
     __source_pyenv && pyenv install --skip-existing 3.12 3.13 3.13t 3.14 3.14t
 
     mkdir -p ~/.cache/ssh  # make folder .ssh/config will expect
