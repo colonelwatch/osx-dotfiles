@@ -58,7 +58,7 @@ do_root() {
     # install applications with brew
     brew install -y \
         audacity bitwarden-cli betterdisplay cmake claude claude-code fd    \
-        fish gh gimp git-lfs google-chrome hf htop macchina                 \
+        fish gh gimp git-lfs google-chrome hf htop libreoffice macchina     \
         macs-fan-control markedit neovim netron ninja nrf-connect parallel  \
         pipx pyenv qdirstat segger-jlink tailscale-app telnet               \
         raspberry-pi-imager ripgrep rsync rust rustup windows-app           \
