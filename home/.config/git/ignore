@@ -3,5 +3,8 @@
 .nvimrc
 .exrc
 
-# Neovim (LSP cache)
-.cache
+# Neovim clangd (LSP cache)
+.cache/clangd/
+
+# Neovim LTeX (LSP user data)
+.ltex/
