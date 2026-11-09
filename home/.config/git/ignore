@@ -8,3 +8,6 @@
 
 # Neovim LTeX (LSP user data)
 .ltex/
+
+# CLAUDE.md user overrides
+CLAUDE.local.md
