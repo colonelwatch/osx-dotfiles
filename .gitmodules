@@ -1,3 +1,6 @@
 [submodule "home/.config/nvim"]
 	path = home/.config/nvim
 	url = https://github.com/colonelwatch/nvim.git
+[submodule "3rdparty/personal-skills"]
+	path = 3rdparty/personal-skills
+	url = https://github.com/colonelwatch/skills.git
