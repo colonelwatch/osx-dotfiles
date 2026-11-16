@@ -98,6 +98,12 @@ do_user() {
     mkdir -p ~/.claude && ln -s -f "$PWD"/home/.claude/CLAUDE.md ~/.claude/
     mkdir -p ~/.claude/skills &&   \
         ln -s -f "$PWD"/home/.claude/skills/* ~/.claude/skills/
+
+    # install git.yazi plugin (if not already installed)
+    if [ ! -d "$PWD"/home/.config/yazi/plugins/git.yazi ]; then
+        ya pkg add yazi-rs/plugins:git
+    fi
+
     git lfs install
 }
 
