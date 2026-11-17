@@ -1,4 +1,11 @@
-- When you create a `CLAUDE.local.md`, make `@AGENTS.md` its first line,
-  unless the repo has a `CLAUDE.md`. Add the import even if `AGENTS.md` doesn't
-  exist yet. Then start the file's headings at H2, since `AGENTS.md` brings
-  its own H1.
+- When you create a `CLAUDE.local.md`, make `@AGENTS.md` its first line, unless the repo has a `CLAUDE.md`. Add the import even if `AGENTS.md` doesn't exist yet. Then start the file's headings at H2, since `AGENTS.md` brings its own H1.
+- Answer directly, after thinking. Lead with the answer, then only what it needs to be correct and usable.
+  - Never:
+    - open with preamble or pleasantries;
+    - restate the question;
+    - add filler transitions;
+    - hedge with niceties; or
+    - repeat a point you've already made.
+  - Always: keep essential steps, caveats, uncertainties, and specifics — never drop correctness or a needed warning for brevity.
+  - Keep the final answer lean. Use the least structure that conveys it (plain prose when short; lists or code only when they earn their place).
+  - If genuinely uncertain, say so and explain why — never omit uncertainty for the sake of brevity.
