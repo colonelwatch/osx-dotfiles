@@ -60,9 +60,9 @@ do_root() {
         audacity bitwarden-cli betterdisplay cmake claude                   \
         claude-code@latest fd fish gawk gh gimp git-lfs google-chrome hf    \
         htop libreoffice macchina macs-fan-control markedit neovim netron   \
-        ninja nrf-connect parallel pipx pyenv qdirstat segger-jlink         \
-        tailscale-app telnet raspberry-pi-imager ripgrep rsync rust rustup  \
-        windows-app wireshark-app xquartz yazi zotero
+        ninja nrf-connect parallel pipx probe-rs-tools pyenv qdirstat       \
+        segger-jlink tailscale-app telnet raspberry-pi-imager ripgrep rsync \
+        rust rustup windows-app wireshark-app xquartz yazi zotero
 
     # declare brew-managed rust to rustup and make it the default
     __source_rustup &&                                              \
