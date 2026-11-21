@@ -11,3 +11,4 @@
 
 # CLAUDE.md user overrides
 CLAUDE.local.md
+.claude/settings.local.json
