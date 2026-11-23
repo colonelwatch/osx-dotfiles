@@ -62,7 +62,7 @@ do_root() {
         htop libreoffice macchina macs-fan-control markedit neovim netron   \
         ninja nrf-connect parallel pipx probe-rs-tools pyenv qdirstat       \
         segger-jlink tailscale-app telnet raspberry-pi-imager ripgrep rsync \
-        rust rustup windows-app wireshark-app xquartz yazi zotero
+        rumdl rust rustup windows-app wireshark-app xquartz yazi zotero
 
     # declare brew-managed rust to rustup and make it the default
     __source_rustup &&                                              \
