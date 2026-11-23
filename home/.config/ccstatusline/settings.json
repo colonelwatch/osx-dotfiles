@@ -1,0 +1,106 @@
+{
+  "version": 4,
+  "lines": [
+    [
+      {
+        "id": "9275797a-4329-4e8a-bc96-00c0484a01d3",
+        "type": "custom-text",
+        "color": "brightWhite",
+        "customText": "Ctx: ",
+        "merge": true
+      },
+      {
+        "id": "285c5c52-061a-4043-b7ef-379dd6788e59",
+        "type": "context-length",
+        "color": "brightWhite",
+        "rawValue": true,
+        "merge": "no-padding",
+        "metadata": {
+          "display": "progress-short"
+        }
+      },
+      {
+        "id": "9b87a486-e0fc-4f16-8f10-7b6e5812ae42",
+        "type": "custom-symbol",
+        "color": "brightWhite",
+        "customSymbol": "/",
+        "merge": "no-padding"
+      },
+      {
+        "id": "8f032460-800b-4593-a10a-a685720fa4cb",
+        "type": "context-window",
+        "color": "brightWhite",
+        "numberFormat": {
+          "style": "whole"
+        },
+        "rawValue": true
+      },
+      {
+        "id": "a1ad2f96-b525-4b47-8e20-c8581d2714b3",
+        "type": "separator",
+        "color": "brightWhite"
+      },
+      {
+        "id": "31962340-cf0b-42ea-82c0-d022b6a4a153",
+        "type": "compaction-counter",
+        "metadata": {
+          "showTriggers": "true"
+        }
+      },
+      {
+        "id": "06fe08f2-a4dd-4a96-8060-2ac5afe7bbcc",
+        "type": "flex-separator",
+        "color": "brightMagenta"
+      },
+      {
+        "id": "a54e8103-d610-476a-974e-47431cd1df2d",
+        "type": "block-limit-timer",
+        "color": "brightRed",
+        "metadata": {
+          "compact": "false"
+        }
+      },
+      {
+        "id": "59df80e1-cb1e-4ee3-b9a1-b91317a7f93c",
+        "type": "separator",
+        "color": "brightWhite"
+      },
+      {
+        "id": "a2750233-60bd-46df-b125-6958576e5848",
+        "type": "session-usage",
+        "color": "cyan",
+        "numberFormat": {
+          "style": "whole"
+        },
+        "metadata": {
+          "display": "slider",
+          "invert": "false",
+          "cursor": "true"
+        }
+      }
+    ],
+    [],
+    []
+  ],
+  "colorLevel": 1,
+  "defaultPaddingSide": "both",
+  "inheritSeparatorColors": false,
+  "globalBold": false,
+  "gitCacheTtlSeconds": 5,
+  "terminalWidthCacheTtlSeconds": 5,
+  "customCommandCacheTtlSeconds": 0,
+  "minimalistMode": false,
+  "powerline": {
+    "enabled": false,
+    "separators": [
+      ""
+    ],
+    "separatorInvertBackground": [
+      false
+    ],
+    "startCaps": [],
+    "endCaps": [],
+    "autoAlign": false,
+    "continueThemeAcrossLines": false
+  }
+}

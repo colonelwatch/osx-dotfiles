@@ -26,5 +26,11 @@
     "anthropic-skills:docx": "off",
     "anthropic-skills:pptx": "off",
     "anthropic-skills:xlsx": "off"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "ccstatusline",
+    "padding": 0,
+    "refreshInterval": 2
   }
 }

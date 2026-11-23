@@ -89,6 +89,9 @@ do_user() {
     # install user-local applications
     pipx install compiledb huggingface-hub
     __source_pyenv && pyenv install --skip-existing 3.12 3.13 3.13t 3.14 3.14t
+    bun add -g --ignore-scripts ccstatusline
+    cargo install mcumgrctl
+    gh extension install github/gh-stack
 
     mkdir -p ~/.cache/ssh  # make folder .ssh/config will expect
 
