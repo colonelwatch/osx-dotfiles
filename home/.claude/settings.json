@@ -1,0 +1,30 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_CODE_MODE": "1"
+  },
+  "permissions": {
+    "deny": [
+      "ShareOnboardingGuide",
+      "ScheduleWakeup",
+      "AskUserQuestion"
+    ]
+  },
+  "model": "sonnet",
+  "feedbackDrafts": "off",
+  "modelSettings": {
+    "haiku": {
+      "effortLevel": "low",
+      "autoCompactWindow": 130000
+    }
+  },
+  "advisorModel": "opus",
+  "tui": "fullscreen",
+  "skipWorkflowUsageWarning": true,
+  "theme": "auto",
+  "useAutoModeDuringPlan": true,
+  "skillOverrides": {
+    "anthropic-skills:docx": "off",
+    "anthropic-skills:pptx": "off",
+    "anthropic-skills:xlsx": "off"
+  }
+}

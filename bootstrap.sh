@@ -95,7 +95,9 @@ do_user() {
     # set up user config
     mkdir -p ~/.config && ln -s -f "$PWD"/home/.config/* ~/.config/
     mkdir -p ~/.ssh && ln -s -f "$PWD"/home/.ssh/* ~/.ssh/
-    mkdir -p ~/.claude && ln -s -f "$PWD"/home/.claude/CLAUDE.md ~/.claude/
+    mkdir -p ~/.claude &&   \
+        ln -s -f "$PWD"/home/.claude/CLAUDE.md ~/.claude/ &&    \
+        ln -s -f "$PWD"/home/.claude/settings.json ~/.claude/
     mkdir -p ~/.claude/skills &&   \
         ln -s -f "$PWD"/home/.claude/skills/* ~/.claude/skills/
 
