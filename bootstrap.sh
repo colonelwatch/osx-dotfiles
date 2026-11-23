@@ -64,14 +64,7 @@ do_root() {
         segger-jlink tailscale-app telnet raspberry-pi-imager ripgrep rsync \
         rumdl rust rustup windows-app wireshark-app xquartz yazi zotero
 
-    # declare brew-managed rust to rustup and make it the default
-    __source_rustup &&                                              \
-        rustup toolchain link system "$(brew --prefix rust)" &&     \
-        rustup default system
-
     __install_alacritty
-    cargo install mcumgrctl
-    gh extension install github/gh-stack
 
     # set fish as login shell for user (needs sudo to be non-interactive)
     if ! __fish_is_login; then
@@ -80,9 +73,14 @@ do_root() {
 }
 
 
-__source_rustup() {
-    export PATH="$(brew --prefix rustup)/bin:$PATH"
-}
+__install_alacritty() (
+    tmpdir=$(mktemp -d)
+    cd "$tmpdir"
+    git clone --depth 1 https://github.com/alacritty/alacritty.git
+    cd alacritty
+    make app
+    cp -r target/release/osx/Alacritty.app /Applications/
+)
 
 
 do_user() {
@@ -103,6 +101,11 @@ do_user() {
         ln -s -f "$PWD"/home/.claude/settings.json ~/.claude/
     mkdir -p ~/.claude/skills &&   \
         ln -s -f "$PWD"/home/.claude/skills/* ~/.claude/skills/
+
+    # declare brew-managed rust to rustup and make it the default
+    __source_rustup &&                                              \
+        rustup toolchain link system "$(brew --prefix rust)" &&     \
+        rustup default system
 
     # install git.yazi plugin (if not already installed)
     if [ ! -d "$PWD"/home/.config/yazi/plugins/git.yazi ]; then
@@ -126,14 +129,9 @@ __source_pyenv() {
 }
 
 
-__install_alacritty() (
-    tmpdir=$(mktemp -d)
-    cd "$tmpdir"
-    git clone --depth 1 https://github.com/alacritty/alacritty.git
-    cd alacritty
-    make app
-    cp -r target/release/osx/Alacritty.app /Applications/
-)
+__source_rustup() {
+    export PATH="$(brew --prefix rustup)/bin:$PATH"
+}
 
 
 # check if pwd is ~/.dotfiles
